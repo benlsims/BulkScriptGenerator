@@ -11,7 +11,7 @@ namespace BulkScriptGenerator
         static void Main(string[] args)
         {
             BulkScriptGenerator csg = new BulkScriptGenerator();
-            csg.run();
+            csg.run(true);
         }
     }
 }

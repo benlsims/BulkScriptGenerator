@@ -41,6 +41,8 @@ namespace BulkScriptGenerator
             var parser = new CsvParser(fileReader);
             headers = parser.Read().ToList();
             fileReader.Close();
+            headers.RemoveAll(o => string.IsNullOrWhiteSpace(o));
+
             return headers;
         }
 
@@ -51,10 +53,13 @@ namespace BulkScriptGenerator
             System.Data.DataColumn column;
             foreach (string s in ColumnNames)
             {
-                column = new System.Data.DataColumn();
-                column.DataType = typeof(System.String);
-                column.ColumnName = s;
-                table.Columns.Add(column);
+                if (!string.IsNullOrWhiteSpace(s))
+                {
+                    column = new System.Data.DataColumn();
+                    column.DataType = typeof(System.String);
+                    column.ColumnName = s;
+                    table.Columns.Add(column);
+                }
             }
 
             return table;

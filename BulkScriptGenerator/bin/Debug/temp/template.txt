@@ -1,6 +1,0 @@
-
-if not exists (select * from NICSCaseChargesModule.NICSCaseFileChargeType where Description = '[DESCRIPTION]' and OrganizationID = @OrganizationID and Code = '§[CODE]' and NICSCaseFileChargeClassTypeID = [CLASS] and Penalty = '[PENALTY]')
-Begin
-	insert into NICSCaseChargesModule.NICSCaseFileChargeType (Description, OrganizationID, Code, NICSCaseFileChargeClassTypeID, Penalty, IsCurrent) 
-	select '[DESCRIPTION]', @OrganizationID, '§[CODE]', [CLASS], '[PENALTY]', 1
-end

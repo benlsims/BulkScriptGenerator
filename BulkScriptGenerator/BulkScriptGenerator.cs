@@ -12,7 +12,7 @@ namespace BulkScriptGenerator
     public class BulkScriptGenerator
     {
         //Needs template.txt, insertvalues.txt, and ScriptPrefix.txt
-        public void run()
+        public void run(bool escapeForSQL)
         {
             try
             {
@@ -49,28 +49,45 @@ namespace BulkScriptGenerator
                 }
                 //Put the prefix at the head of the file
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine(File.ReadAllText(_operatingDirectory + "\\ScriptPrefix.txt"));
-                
+                if (File.Exists(_operatingDirectory + "\\ScriptPostfix.txt"))
+                {
+                    sb.AppendLine(File.ReadAllText(_operatingDirectory + "\\ScriptPrefix.txt"));
+                }
+                Console.WriteLine("Generating File...");
+                int progress = 1;
                 //foreach row in the insertvalues file replace the column placeholder with the column value
                 foreach (DataRow row in dt.Rows)
                 {
                     Dictionary<string, string> replacements = new Dictionary<string, string>();
                     foreach (string k in columns)
                     {
-                        replacements.Add("[" + k + "]", row[k].ToString().Replace("'", "''"));
+                        if (escapeForSQL)
+                        {
+                            replacements.Add(k, row[k].ToString().Replace("'", "''"));
+                        }
+                        else
+                        {
+                            replacements.Add(k, row[k].ToString());
+                        }
+                        
                     }
                     sb.AppendLine(template.Replace(replacements));
+                    ProgressBar.drawTextProgressBar(progress++, dt.Rows.Count);
                 }
 
+                if (File.Exists(_operatingDirectory + "\\ScriptPostfix.txt"))
+                {
+                    sb.AppendLine(File.ReadAllText(_operatingDirectory + "\\ScriptPostfix.txt"));
+                }
                 //Write the file to the directory
-                File.WriteAllText(_operatingDirectory + "\\results.sql", sb.ToString());
+                File.WriteAllText(_operatingDirectory + "\\results.txt", sb.ToString());
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
 
-            Console.WriteLine("Done");
+            Console.WriteLine("\r\nDone");
             Console.Read();
         }
     }
