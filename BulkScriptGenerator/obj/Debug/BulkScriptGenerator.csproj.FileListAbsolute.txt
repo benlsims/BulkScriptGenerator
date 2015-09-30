@@ -1,0 +1,18 @@
+c:\users\bsims\documents\visual studio 2013\projects\BulkScriptGenerator\BulkScriptGenerator\bin\Debug\BulkScriptGenerator.exe.config
+c:\users\bsims\documents\visual studio 2013\projects\BulkScriptGenerator\BulkScriptGenerator\obj\Debug\BulkScriptGenerator.csprojResolveAssemblyReference.cache
+c:\users\bsims\documents\visual studio 2013\projects\BulkScriptGenerator\BulkScriptGenerator\bin\Debug\BulkScriptGenerator.exe
+c:\users\bsims\documents\visual studio 2013\projects\BulkScriptGenerator\BulkScriptGenerator\bin\Debug\BulkScriptGenerator.pdb
+c:\users\bsims\documents\visual studio 2013\projects\BulkScriptGenerator\BulkScriptGenerator\bin\Debug\Data.dll
+c:\users\bsims\documents\visual studio 2013\projects\BulkScriptGenerator\BulkScriptGenerator\bin\Debug\DataNormalization.dll
+c:\users\bsims\documents\visual studio 2013\projects\BulkScriptGenerator\BulkScriptGenerator\bin\Debug\Utilities.dll
+c:\users\bsims\documents\visual studio 2013\projects\BulkScriptGenerator\BulkScriptGenerator\obj\Debug\BulkScriptGenerator.exe
+c:\users\bsims\documents\visual studio 2013\projects\BulkScriptGenerator\BulkScriptGenerator\obj\Debug\BulkScriptGenerator.pdb
+D:\src\BulkScriptGenerator\BulkScriptGenerator\bin\Debug\BulkScriptGenerator.exe.config
+D:\src\BulkScriptGenerator\BulkScriptGenerator\obj\Debug\BulkScriptGenerator.exe
+D:\src\BulkScriptGenerator\BulkScriptGenerator\obj\Debug\BulkScriptGenerator.pdb
+D:\src\BulkScriptGenerator\BulkScriptGenerator\bin\Debug\BulkScriptGenerator.exe
+D:\src\BulkScriptGenerator\BulkScriptGenerator\bin\Debug\BulkScriptGenerator.pdb
+D:\src\BulkScriptGenerator\BulkScriptGenerator\bin\Debug\CsvHelper.dll
+D:\src\BulkScriptGenerator\BulkScriptGenerator\bin\Debug\CsvHelper.pdb
+D:\src\BulkScriptGenerator\BulkScriptGenerator\bin\Debug\CsvHelper.xml
+D:\src\BulkScriptGenerator\BulkScriptGenerator\obj\Debug\BulkScriptGenerator.csprojResolveAssemblyReference.cache
